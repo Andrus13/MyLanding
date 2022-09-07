@@ -1,74 +1,150 @@
 
-//загрузка основной страницы
-$(document).ready(function(){
-    $('.header').height($(window).height());
-}); 
+//высота wellcome page
+// $(document).ready(function(){
+//     $('.header').height($(window).height());
+// }); 
+function headerHeight(){
+  const header = document.querySelector(".header");
+  const over = document.querySelector(".overlay");
+  const h = window.outerHeight;
+  const w = window.outerWidth;
+  console.log(w);
+  if(w < 992){
+    if(h > w) {  
+      header.style.height = `${h}px`;
+      over.style.height = `${h}px`;
+    } else {  
+      header.style.height = `${h * 1.5}px`;
+      over.style.height = `${h * 1.5}px`;
+    }
+  }else{
+    header.style.height = `${window.innerHeight}px`;
+    over.style.height = `${window.innerHeight}px`;
+  }
+}
 
-//скрол меню  
+headerHeight();
+
+// смена ориентации 
+window.addEventListener("resize", function()  {
+  headerHeight();
+}, false);
+
+// скрол меню  
 $(".navbar-nav a").click(function(){
     $("body,html").animate({
      scrollTop:$("#" + $(this).data('value')).offset().top
     },500);
-    
 });
-//шкала просмотра страницы
+
+//progres bar
 function progresBar(){
   const progressTag = document.querySelector(".progresbar");
   const bodyTag = document.querySelector("body");
-  const cabina = document.querySelector(".cabina");
-  const corp = document.querySelector(".corpus");
-  const Lwheel = document.querySelector(".L-wheel");
-  const Rwheel = document.querySelector(".R-wheel");
-  const clouds = document.querySelector(".clouds");
 
   document.addEventListener("scroll", function(){
     const pixels = window.pageYOffset;
     const pageHeight = bodyTag.getBoundingClientRect().height;
     const totalScrollableDistance = pageHeight - window.innerHeight;
-
     const percentage = pixels / totalScrollableDistance;
 
     progressTag.style.width = `${100 * percentage}%`;
-
-    cabina.style.webkitAnimationPlayState = "running";
-    corp.style.webkitAnimationPlayState = "running";
-    Lwheel.style.webkitAnimationPlayState = "running";
-    Rwheel.style.webkitAnimationPlayState = "running";
-    clouds.style.webkitAnimationPlayState = "running";
   });
 
 };
 
 progresBar();
 
-//кнопка "выбрать язык"
-$(function(){
-  $(".lang_btn").click(function() {
-    $('.lang_menu').removeClass('hidden_men');
-    $('.lang_menu').addClass('showed_men');
-  });
+// Stoped and running animation
+let scrollTimer = -1;
+const cabina = document.querySelector(".cabina");
+const corp = document.querySelector(".corpus");
+const Lwheel = document.querySelector(".L-wheel");
+const Rwheel = document.querySelector(".R-wheel");
+const clouds = document.querySelector(".clouds");
 
-  $(document).on('click', function(e) {
-    if (!$(e.target).closest(".l_menu").length) {
-      $('.lang_menu').removeClass('showed_men');
-      $('.lang_menu').addClass('hidden_men');
+
+function bodyScroll() {
+  cabina.style.webkitAnimationPlayState = "running";
+  corp.style.webkitAnimationPlayState = "running";
+  Lwheel.style.webkitAnimationPlayState = "running";
+  Rwheel.style.webkitAnimationPlayState = "running";
+  clouds.style.webkitAnimationPlayState = "running";
+
+  if (scrollTimer != -1)
+    clearTimeout(scrollTimer);
+
+  scrollTimer = window.setTimeout("scrollFinished()", 500);
+};
+
+function scrollFinished() {
+    cabina.style.webkitAnimationPlayState = "paused";
+    corp.style.webkitAnimationPlayState = "paused";
+    Lwheel.style.webkitAnimationPlayState = "paused";
+    Rwheel.style.webkitAnimationPlayState = "paused";
+    clouds.style.webkitAnimationPlayState = "paused";
+};
+
+//"выбрать язык"
+function LanguageMenu(){
+  const pixels = document.documentElement.clientWidth;
+  
+  //кнопка "выбрать язык" <992px
+  function langForSm(){
+    var modal = document.querySelector(".modal");
+    var trigger = document.querySelector(".lang_btn");
+    var closeButton = document.querySelector(".close_btn");
+
+    function toggleModal() {
+        modal.classList.toggle("show-modal");
     };
-    e.stopPropagation();
-  });
-});
 
-//раздел товаров
+    function windowOnClick(event) {
+        if (event.target === modal) {
+            toggleModal();
+        };
+    };
+
+    trigger.addEventListener("click", toggleModal);
+    closeButton.addEventListener("click", toggleModal);
+    window.addEventListener("click", windowOnClick);
+  };
+
+  if(pixels > 992){
+    //кнопка "выбрать язык" >=992px
+    $(function(){
+      $(".lang_btn").click(function() {
+        $('.lng_for_md').removeClass('hidden_men');
+        $('.lng_for_md').addClass('showed_men');
+      });
+
+      $(document).on('click', function(e) {
+        if (!$(e.target).closest(".l_menu").length) {
+          $('.lng_for_md').removeClass('showed_men');
+          $('.lng_for_md').addClass('hidden_men');
+        };
+      });
+    });
+  }else{
+    langForSm();
+  }
+};
+
+LanguageMenu();
+
+//filter bar 
 $(function(){
-  let arrow = document.querySelectorAll(".arrow1");
+  const arrow = document.querySelectorAll(".arrow1");
 
   for (var i = 0; i < arrow.length; i++) {
     arrow[i].addEventListener("click", (e)=>{
-    let arrowParent = e.target.parentElement.parentElement;
+    const arrowParent = e.target.parentElement.parentElement;
     arrowParent.classList.toggle("showMenu");
     });
   };
 });
 
+// close button for chip
 $(".closebtn").click(function() {
   let inputChipValue = [];
   let inputValue = [];
@@ -127,10 +203,9 @@ $("#loadMore").on('click', function (e) {
       $("#loadMore").fadeOut('slow'); 
     }
   }
-  
-  
 });
 
+//работа cataloge
 $(function () {
   
   $(".VV").slice(0, 3).show();
@@ -178,6 +253,29 @@ function showValue(el){
   $(".chip" + "." + $(el).attr("value")).show().addClass('d-flex');
 };
 
+// Подробнее для товара 
+function DitailsForGoods(){
+  var trigger = document.querySelectorAll(".models .card .btn");
+  var modal = document.querySelector(".modal_for_goods");
+  var closeButton = document.querySelector(".close_btn_goods");
+
+  function toggleModal() {
+      modal.classList.toggle("show-modal");
+  };
+
+  function windowOnClick(event) {
+      if (event.target === modal) {
+          toggleModal();
+      };
+  };
+
+  trigger.forEach(e =>{
+    e.addEventListener("click", toggleModal)
+  });
+  closeButton.addEventListener("click", toggleModal);
+  window.addEventListener("click", windowOnClick);
+};
+DitailsForGoods();
 
 // форма обратной связи
 $(function($){

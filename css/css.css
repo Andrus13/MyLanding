@@ -66,18 +66,61 @@ body{
     transition: visibility 0.3s ease 0s, opacity 0.3s ease 0s;
     z-index: 10;
 }
-.lang_menu ul{
+.modal {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(204, 204, 204, 0.4);
+    opacity: 0;
+    visibility: hidden;
+    transform: scale(1.1);
+    transition: visibility 0s linear 0.25s, opacity 0.25s 0s, transform 0.25s;
+}
+.modal-content {
+    position: absolute;
+    background-color: rgb(52, 58, 64, 0.9) !important;
+    padding: 1rem 1.5rem;
+    width: 50% !important;
+    height: 200px;
+    border-radius: 0.5rem;
+}
+.close_btn_area{
+    width: 100%;
+}
+.close_btn {
+    width: 1rem;
+    line-height: 1.5rem;
+    text-align: center;
+    background-color: transparent;
+    color: rgba(255, 255, 255, 0.5);
+    transform: scale(1.8);
+}
+.show-modal {
+    opacity: 1;
+    visibility: visible;
+    transform: scale(1.0);
+    transition: visibility 0s linear 0s, opacity 0.25s 0s, transform 0.25s;
+}
+.lng_for_md ul{
     padding-inline-start: 0px;
 }
-.lang_menu li{
+.lng_for_md li{
     font-size: larger;
     color: rgba(255, 255, 255, 0.5);
     text-decoration: none;
 }
-.lang_menu li:hover{
+.lng_for_md li:hover{
     color: rgba(255, 255, 255);
     text-decoration: none;
     cursor: pointer;
+}
+.lng_for_sm ul{
+    padding-inline-start: 0px;
+}
+.lng_for_sm li{
+    color: rgb(255, 255, 255, 0.5);
 }
 .progresbar{
     position: relative;
@@ -356,8 +399,8 @@ body{
     background-position: center;
 }
 .brand{
-    position: absolute;
-    top: 40%;
+    height: 25vh;
+    width: 100vh;
     margin: auto;
     padding: 2em;
 }
@@ -387,8 +430,8 @@ body{
     background:#F97300;
     color:#fff;
 }
-
-.header .carousel{  
+.header .carousel,
+.about .carusel{  
     margin: auto;
     padding: 2em;
 }
@@ -398,21 +441,30 @@ body{
     margin: auto;
     border-radius: 10%;  
 }
+.about .carousel-item img{
+    width: 100%;
+    height: 500px;
+    margin: auto;
+}
 .header .carousel-inner{
     border-radius: 10%;
     box-shadow: 0px 15px 15px 10px rgba(0, 0, 0, 0.5);
 }
 .header .carousel-control-prev-icon,
-.header .carousel-control-next{
+.header .carousel-control-next,
+.about .carousel-control-prev-icon,
+.about .carousel-control-next{
     visibility: hidden;
 }
 .header .carousel:hover .carousel-control-prev-icon,
-.header .carousel:hover .carousel-control-next-icon{
+.header .carousel:hover .carousel-control-next-icon,
+.about .carousel:hover .carousel-control-prev-icon,
+.about .carousel:hover .carousel-control-next-icon{
     visibility: visible;
 }
 .overlay{
     position: absolute;
-    min-height: 100%;
+    height: 0;
     min-width: 100%;
     left: 0;
     top: 0;
@@ -442,7 +494,6 @@ body{
 .sidebar ul{
     padding: 0px;
     margin: 0px;
-    
 }
 .sidebar ul li{
     list-style: none;
@@ -563,9 +614,60 @@ body{
     background-color: transparent;
 }
 .catalog .btn{
-    background-color: black;
+    background-color: rgb(0, 0, 0);
     color: rgb(255, 255, 255);
-    border-color: black;
+    border-color: rgb(0, 0, 0);
+}
+.modal_for_goods {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(204, 204, 204, 0.6);
+    opacity: 0;
+    visibility: hidden;
+    z-index: 2050;
+    transform: scale(1.1);
+    transition: visibility 0s linear 0.25s, opacity 0.25s 0s, transform 0.25s;
+}
+.modal-content_goods {
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.9) !important;
+    padding: 1rem 1.5rem;
+    width: 100% !important;
+    height: 100%;
+    border: 1px solid rgb(0, 0, 0, 0.4);
+    border-radius: 0.5rem;
+    transform: scale(0.6);
+    overflow-y: auto;
+    scrollbar-gutter: stable;
+}
+.table-bordered td{
+    border: 3px solid rgb(222, 226, 230) !important;
+    font-size: large;
+    font-weight: bold;
+}
+.modal-content_goods img{
+    width: 100%;
+}
+.close_btn_for_goods{
+    width: 100%;
+}
+.close_btn_goods {
+    width: 1rem;
+    line-height: 1.5rem;
+    text-align: center;
+    cursor: pointer;
+    background-color: transparent;
+    color: rgba(0, 0, 0);
+    transform: scale(3.0);
+}
+.show-modal {
+    opacity: 1;
+    visibility: visible;
+    transform: scale(1.0);
+    transition: visibility 0s linear 0s, opacity 0.25s 0s, transform 0.25s;
 }
 .news{
     height: 75vh;
@@ -583,7 +685,7 @@ body{
 .news .carousel:hover .carousel-control-next-icon{
     visibility: visible;
 }
-.news img{
+.news .card img{
     height: 200px;
 }
 .news .card-footer{
@@ -632,6 +734,9 @@ input[type="email"]:focus {
     border-bottom: 2px solid;
     border-color: black;
 }
+.footer ul{
+    padding-inline-start: 0px;
+}
 .icon-instagram,
 .icon-mail,
 .icon-facebook2,
@@ -679,3 +784,72 @@ li.contact a{
 
 /*end*/
 
+@media screen and (min-width: 340px) and (max-width: 720px) {
+    .brand{
+        height: 35vh;
+    }
+    .description font{
+        margin-left: 0;
+    }
+    .description p{
+        margin-left: 0;
+        width: 100%;
+    }
+    .description button{
+        margin-left: 33%;
+    }
+    .sthing{
+        height: 25vh;
+    }
+    .modal-content_goods{
+        transform: scale(0.8);
+    }
+    .news{
+        height: 90vh;
+    }
+    .icon-instagram,
+    .icon-mail,
+    .icon-facebook2,
+    .icon-telegram,
+    .icon-twitter{
+        margin-right: 10px;
+    }
+    
+}
+@media screen and (min-width: 340px) and (max-width: 991px) and (orientation: landscape){
+    .modal-content{
+        width: 40% !important;
+        height: 200px;
+    }
+    .lng_for_sm{
+        margin-top: 0;
+    }
+}
+@media screen and (min-width: 721px) and (max-width: 991px){
+    .brand{
+        height: 30vh;
+    }
+    .news{
+        height: 70vh;
+    }
+    .modal-content{
+       width: 40% !important;
+    }
+    .modal-content_goods{
+        transform: scale(0.9);
+    }
+}
+@media only screen and (max-width: 991px) and (orientation: landscape) {
+    .brand{
+        height: 40vh;
+    }
+    .description{
+        width: 100vh;
+    }
+    .sthing{
+        height: 50vh;
+    }
+    .news{
+        height: 150vh;
+    }
+}
