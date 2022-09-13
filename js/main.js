@@ -264,9 +264,9 @@ function DitailsForGoods(){
   };
 
   function windowOnClick(event) {
-      if (event.target === modal) {
-          toggleModal();
-      };
+    if (event.target === modal) {
+        toggleModal();
+    };
   };
 
   trigger.forEach(e =>{
@@ -286,11 +286,40 @@ $('.contact_form input').click(function(){
   $(this).prop('required', true);
 });
 
-function noDigits(event) {
-  if ("1234567890-_=+*)(&^@%$#?/][}{|!' ;:.,`~№<>".indexOf(event.key) != -1) 
+// ограничения для Имя 
+function justWords(event) {
+  let charCode = (event.which) ? event.which : event.keyCode;
+
+  if (charCode == 39 || (charCode >= 65 && charCode <= 90) || (charCode >= 97 && charCode <= 122) || charCode == 137 || charCode == 139 || charCode == 1025 || charCode == 1028 || (charCode >= 1030 && charCode <= 1131) || (charCode >= 1040 && charCode <= 1103) || charCode == 1105 || charCode == 1108 || (charCode >= 1110 && charCode <= 1111) || (charCode >= 1168 && charCode <= 1169)){
+    
+  }else {
     event.preventDefault();
+  };
 };
 
+// ограничения для Email 
+function noSpcialCharForEmail(event){
+  let charCode = (event.which) ? event.which : event.keyCode;
+
+  if ((charCode >= 45 && charCode <= 46) || (charCode >= 48 && charCode <= 57) || (charCode >= 64 && charCode <= 90) || charCode == 95 || (charCode >= 97 && charCode <= 123)){
+    
+  }else {
+    event.preventDefault();
+  };
+};
+
+// ограничения для текстового поля 
+function noSpcialChar(event) {
+  let charCode = (event.which) ? event.which : event.keyCode;
+  
+  if ((charCode >= 32 && charCode <= 34) || charCode == 37 || (charCode >= 39 && charCode <= 41) || (charCode >= 43 && charCode <= 46) || (charCode >= 48 && charCode <= 58) || charCode == 61 || (charCode >= 63 && charCode <= 90) || charCode == 95 || (charCode >= 97 && charCode <= 122) || charCode == 137 || charCode == 139 ||  charCode == 147 || charCode == 154 || (charCode >= 160 && charCode <= 165) || (charCode >= 174 && charCode <= 175) || charCode == 1025 || charCode == 1028 || (charCode >= 1030 && charCode <= 1131) || (charCode >= 1040 && charCode <= 1103) || charCode == 1105 || charCode == 1108 || (charCode >= 1110 && charCode <= 1111) || (charCode >= 1168 && charCode <= 1169)){
+ 
+  }else {
+    event.preventDefault();
+  };
+};
+
+// получение данных с формы
 function getFormValues(){
   const {form} = document.forms;
 

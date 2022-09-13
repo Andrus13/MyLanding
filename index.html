@@ -1045,12 +1045,12 @@
         
                         <label class="my-1 lng-name" for="inputName">Имя: *</label>
                         <div class="">
-                            <input type="text" name="name" class="form-control" id="inputName" placeholder="Name" minlength="2" maxlength="12" onkeypress="noDigits(event)">
+                            <input type="text" name="name" class="form-control" id="inputName" placeholder="Name" minlength="2" maxlength="12" onkeypress="justWords(event)">
                         </div>
                     
                         <label class="my-1 " for="inputEmail">Email: *</label>
                         <div class="">
-                            <input type="email" name="email" class="form-control" id="inputEmail" placeholder="Email@example.com" minlength="5" maxlength="64" >
+                            <input type="email" name="email" class="form-control" id="inputEmail" placeholder="Email@example.com" minlength="5" maxlength="64" onkeypress="noSpcialCharForEmail(event)">
                         </div>
         
                         <label class="my-1 lng-phone" for="inputphone">Телефон: *</label>
@@ -1061,7 +1061,7 @@
                     <div class="form-row d-flex flex-column my-2 col-8">
                         <label class="my-1 lng-comment" for="comment">Комментарий:</label>
                         <div class="">
-                            <textarea type="text" name="textarea" class="form-control" id="comment" rows="5" placeholder="..." maxlength="300"></textarea>
+                            <textarea type="text" name="textarea" class="form-control" id="comment" rows="5" placeholder="..." maxlength="300" onkeypress="noSpcialChar(event)"></textarea>
                         </div>
                     </div>
         
@@ -1070,7 +1070,7 @@
                     </div>
     
                     <p class="lng-importent_text my-2">* - поля обязательные для заполнения.</p>
-
+                    
                 </form>    
             </div>  
         </div>
