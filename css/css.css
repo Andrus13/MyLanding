@@ -740,11 +740,14 @@ input[type="email"]:focus {
 .icon-instagram,
 .icon-mail,
 .icon-facebook2,
-.icon-telegram,
-.icon-twitter{
+.icon-telegram{
     color: black;
     font-size: 50px;
     margin-right: 15px;
+}
+.icon-twitter{
+    color: black;
+    font-size: 50px;
 }
 li.icon {
     text-align: center;
@@ -810,8 +813,7 @@ li.contact a{
     .icon-instagram,
     .icon-mail,
     .icon-facebook2,
-    .icon-telegram,
-    .icon-twitter{
+    .icon-telegram{
         margin-right: 10px;
     }
     

@@ -25,7 +25,7 @@ function headerHeight(){
 
 headerHeight();
 
-// смена ориентации 
+// смена ориентации экрана
 window.addEventListener("resize", function()  {
   headerHeight();
 }, false);
@@ -56,15 +56,14 @@ function progresBar(){
 progresBar();
 
 // Stoped and running animation
-let scrollTimer = -1;
-const cabina = document.querySelector(".cabina");
-const corp = document.querySelector(".corpus");
-const Lwheel = document.querySelector(".L-wheel");
-const Rwheel = document.querySelector(".R-wheel");
-const clouds = document.querySelector(".clouds");
-
-
 function bodyScroll() {
+  let scrollTimer = -1;
+  const cabina = document.querySelector(".cabina");
+  const corp = document.querySelector(".corpus");
+  const Lwheel = document.querySelector(".L-wheel");
+  const Rwheel = document.querySelector(".R-wheel");
+  const clouds = document.querySelector(".clouds");
+
   cabina.style.webkitAnimationPlayState = "running";
   corp.style.webkitAnimationPlayState = "running";
   Lwheel.style.webkitAnimationPlayState = "running";
@@ -74,17 +73,14 @@ function bodyScroll() {
   if (scrollTimer != -1)
     clearTimeout(scrollTimer);
 
-  scrollTimer = window.setTimeout("scrollFinished()", 500);
-};
-
-function scrollFinished() {
+  scrollTimer = window.setTimeout(function scrollFinished() {
     cabina.style.webkitAnimationPlayState = "paused";
     corp.style.webkitAnimationPlayState = "paused";
     Lwheel.style.webkitAnimationPlayState = "paused";
     Rwheel.style.webkitAnimationPlayState = "paused";
     clouds.style.webkitAnimationPlayState = "paused";
+  }, 500);
 };
-
 //"выбрать язык"
 function LanguageMenu(){
   const pixels = document.documentElement.clientWidth;
@@ -136,7 +132,7 @@ LanguageMenu();
 $(function(){
   const arrow = document.querySelectorAll(".arrow1");
 
-  for (var i = 0; i < arrow.length; i++) {
+  for (let i = 0; i < arrow.length; i++) {
     arrow[i].addEventListener("click", (e)=>{
     const arrowParent = e.target.parentElement.parentElement;
     arrowParent.classList.toggle("showMenu");
