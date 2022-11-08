@@ -253,7 +253,7 @@ function showValue(el){
 };
 
 //фасетный поиск
-function exportSelectedCheckbox(event){
+function exportSelectedCheckbox(){
 
   const boxes = document.querySelectorAll('input[type="checkbox"]');
   let checkedBoxes = [];
@@ -263,12 +263,8 @@ function exportSelectedCheckbox(event){
       checkedBoxes.push(e.value);
     }
   });
-  fetch('/export-values', {
-    method: 'POST',
-    headers: {
-        'Content-Type': 'application/x-www-form-urlencoded'
-    },
-    body: checkedBoxes
+  fetch('/?' + checkedBoxes, {
+    method: 'GET',
   })
     .then(res => res.text())
     .then(res => console.log(res));
@@ -278,6 +274,7 @@ document.querySelectorAll('input[type="checkbox"]').forEach( e =>{
   e.addEventListener('click', exportSelectedCheckbox);
 });
 
+//
 // function fasetSearch(){
 //   const boxes = document.querySelectorAll('input[type="checkbox"]');
 //   let checkedBoxes = [];

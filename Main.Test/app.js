@@ -9,18 +9,14 @@ const goodsDB = db.goodsDB;
 
 const httpServer = http.createServer( (req, res) => {
     console.log(`req: ${req.url}`);
+    console.log(`method: ${req.method}`);
+    
     if (req.url === '/'){
         sendRes('index.html', 'text/html', res);
     }
-    else if (req.url === '/export-values') {
-        let body = [];
-        req.on('data', chunk => {
-            body.push(chunk);
-        });
-        req.on('end', () => {
-            console.log('!!!!------------- ' + body);
-            getGoods(body, res);
-        });
+    else if (req.url.includes('/?')) {
+        let data = req.url.slice(2);
+        getGoods(data, res);
     }
     else if (req.url === '/save-form') {
         let body = "";
@@ -38,7 +34,6 @@ const httpServer = http.createServer( (req, res) => {
 
 }).listen(3000, () =>{
     console.log('server start 3000');
-    // getGoods();
 });
 
 function sendRes(url, contentType, res){
@@ -95,6 +90,10 @@ function writeTodb(data, res) {
 
 
 function getGoods(data, res){
+    data = data.split(',');
+    console.log('typeof ----' + typeof data);
+    console.log('get req ----' + data);
+
     goodsDB.goodsCategory.findAll({
         include: goodsDB.goodsList,
         as: 'category',
