@@ -1,0 +1,865 @@
+html,
+body{
+    height: auto;   
+    scroll-behavior: smooth;
+}
+.btn:focus{
+    outline:none !important;
+    box-shadow: none !important;
+}
+.unselectable{
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+.navigation{    
+    z-index: 100;
+    position: sticky;
+}
+.nav-item{
+    width: 100px; 
+}
+.nav-item a{
+    position: relative;
+}
+.nav-item a::before {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 2px;
+    background: white;
+    transition: all .3s;
+}
+.nav-item:hover a::before {
+    width: 100%;
+}
+.lang button{
+    text-shadow: 0px 0px 20px #FFFFFF;
+    font-weight: 500;
+    font-size: larger;
+    background-color: transparent;
+    border: 0px;
+}
+.hidden_men{
+    position: absolute;
+    inset: calc(100% + 15px) 0px auto calc(50% - 92.5px);
+    width: 185px;
+    background-color: rgba(71, 71, 71, 0.8);
+    border-radius: 5px;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0.3s ease 0s, opacity 0.3s ease 0s;
+    z-index: 10;
+}
+.showed_men{
+    position: absolute;
+    inset: calc(100% + 15px) 0px auto calc(50% - 92.5px);
+    width: 185px;
+    background-color: rgba(71, 71, 71, 0.8);
+    border-radius: 5px;
+    visibility: visible;
+    opacity: 1;
+    transition: visibility 0.3s ease 0s, opacity 0.3s ease 0s;
+    z-index: 10;
+}
+.modal {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(204, 204, 204, 0.4);
+    opacity: 0;
+    visibility: hidden;
+    transform: scale(1.1);
+    transition: visibility 0s linear 0.25s, opacity 0.25s 0s, transform 0.25s;
+}
+.modal-content {
+    position: absolute;
+    background-color: rgb(52, 58, 64, 0.9) !important;
+    padding: 1rem 1.5rem;
+    width: 50% !important;
+    height: 200px;
+    border-radius: 0.5rem;
+}
+.close_btn_area{
+    width: 100%;
+}
+.close_btn {
+    width: 1rem;
+    line-height: 1.5rem;
+    text-align: center;
+    background-color: transparent;
+    color: rgba(255, 255, 255, 0.5);
+    transform: scale(1.8);
+}
+.show-modal {
+    opacity: 1;
+    visibility: visible;
+    transform: scale(1.0);
+    transition: visibility 0s linear 0s, opacity 0.25s 0s, transform 0.25s;
+}
+.lng_for_md ul{
+    padding-inline-start: 0px;
+}
+.lng_for_md li{
+    font-size: larger;
+    color: rgba(255, 255, 255, 0.5);
+    text-decoration: none;
+}
+.lng_for_md li:hover{
+    color: rgba(255, 255, 255);
+    text-decoration: none;
+    cursor: pointer;
+}
+.lng_for_sm ul{
+    padding-inline-start: 0px;
+}
+.lng_for_sm li{
+    color: rgb(255, 255, 255, 0.5);
+}
+.progresbar{
+    position: relative;
+    width: 0;
+    height: 10px;
+    background-color: rgba(255, 196, 0, 0.863);
+    transition: all 0.15s;
+}
+.animated_tractor{
+    position: absolute;
+    margin-top: -10px;
+    margin-right: -8px;
+    width: 1px;
+    height: 1px;
+}
+.cabina{
+    position: absolute;
+    content: "";
+    width:10px;
+    height: 10px;
+    background-color: rgba(136, 253, 253, 0.5);
+    border: 2px solid black;
+    border-radius: 20% 50% 0 0;
+    animation: moveCabina 0.8s infinite;
+    animation-play-state: paused;
+}
+.corpus{
+    position: absolute;
+    margin-top: 8px;
+    margin-left: 0px;
+    content: "";
+    width: 30px;
+    height: 10px;
+    background-color: black;
+    border-radius: 0 50% 0 0;
+    animation: moveCorpus 0.8s infinite;
+    animation-play-state: paused;
+}
+.truba{
+    position: absolute;
+    content: "";
+    width: 5px;
+    height: 10px;
+    background-color: transparent;
+    margin-top: 4px;
+    margin-left: 25px;
+}
+.truba-1{
+    position: absolute;
+    content: "";
+    width: 1px;
+    height: 5px;
+    margin-top: 1px;
+    border-radius: 0 50% 0 0;
+    background-color: black;
+    border: 1px solid black;
+}
+.truba-2{
+    position: absolute;
+    content: "";
+    width: 3px;
+    height: 1px;
+    margin-left: -1.5px;
+    border-radius: 0 50% 0 0;
+    background-color: black;
+    border: 1px solid black;
+}
+.L-wheel{
+    position: absolute;
+    margin-top: 8px;
+    margin-left: -8px;
+    content: "";
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: black;
+    border: 1px solid black;
+    box-shadow: 0 0 0 1px  white;
+    animation: moveWheel 1s linear infinite;
+    animation-play-state: paused;
+}
+.L-wheel-1{
+    position: absolute;
+    width: 100%;
+    height: 0.5px;
+    background-color: white;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.R-wheel{
+    position: absolute;
+    margin-top: 13px;
+    margin-left: 19px;
+    content: "";
+    width:10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: black;
+    border: 1px solid black;
+    box-shadow: 0 0 0px 1px  white;
+    animation: moveWheel 1s linear infinite;
+    animation-play-state: paused;
+}
+.R-wheel-1{
+    position: absolute;
+    width: 100%;
+    height: 0.5px;
+    background-color: white;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.L-wheel-1:nth-child(2),
+.R-wheel-1:nth-child(2){
+    transform: rotate(90deg);
+} 
+.L-wheel-2{
+    position: absolute;
+    content: "";
+    width: 4px;
+    height: 4px;
+    margin-top: 35%;
+    margin-left: 35%;
+    border-radius: 100%;
+    background-color: black;
+}
+.R-wheel-2{
+    position: absolute;
+    content: "";
+    width: 2px;
+    height: 2px;
+    margin-top: 38%;
+    margin-left: 38%;
+    border-radius: 100%;
+    background-color: black;
+}
+.clouds{
+    position: absolute;
+    content: "";
+    margin-top: 1px; 
+    margin-left: 13px;
+    width: 5px;
+    height: 5px;
+    background-color: transparent;
+    animation: anima 0.8s infinite;
+    animation-play-state: paused;
+}
+.cloud-1{
+    position: absolute;
+    content: "";
+    width: 5px;
+    height: 5px;
+    background-color: transparent;
+}
+.cloud-1-1{
+    position: absolute;
+    content: "";
+    width: 2px;
+    height: 2px;
+    margin-left: 1px;
+    border-radius: 100%;
+    background-color: rgba(128, 128, 128);
+}
+.cloud-1-1:nth-child(2){
+    margin-left: 2px;
+    margin-top: 0.5px;
+}
+.cloud-1-1:nth-child(3){
+    margin-top: 1px;
+    margin-left: 0px;
+}
+.cloud-1-1:nth-child(4){
+    margin-top: 1.5px;
+    margin-left: 1px;
+}
+.cloud-2{
+    position: absolute;
+    content: "";
+    margin-top: 3px;
+    margin-left: 5px;
+    width: 5px;
+    height: 5px;
+    background-color: transparent;
+}
+.cloud-2-1{
+    position: absolute;
+    content: "";
+    width: 2px;
+    height: 2px;
+    margin-left: 1px;
+    border-radius: 100%;
+    background-color: rgba(128, 128, 128);
+}
+.cloud-2-1:nth-child(2){
+    margin-left: 2px;
+    margin-top: 0.5px;
+}
+.cloud-2-1:nth-child(3){
+    margin-top: 1px;
+    margin-left: 0px;
+}
+.cloud-2-1:nth-child(4){
+    margin-top: 1.5px;
+    margin-left: 1px;
+}
+.Flag{
+    position: absolute;
+    width: 10px;
+    height: 0.5px;
+    margin-top: -7px;
+    margin-left: -8px;
+    background-color: black;
+    top: 50%;
+    transform: rotate(45deg);
+}
+.Flag-1{
+    position: absolute;
+    width: 5px;
+    height: 2px;
+    margin-top: 2px;
+    margin-left: -1.5px;
+    background-color: rgb(0, 87, 184);
+    transform: rotate(90deg);
+}
+.Flag-1:nth-child(2){
+    margin-left: 0.5px;
+    background-color: rgb(255, 215, 0);
+}
+@keyframes anima{
+    0% { 
+        margin-top: 1px; 
+        margin-left: 13px;
+     }
+    50%{
+        margin-top: 0px;
+        margin-left: 10px;
+    }
+    100%{
+        margin-top: -1px; 
+        margin-left: 7px;
+    }
+}
+@keyframes moveWheel{
+    0%{
+      transform: rotate(0deg);
+    }
+    100%{
+      transform: rotate(360deg);
+    }
+}
+@keyframes moveCabina{
+    0%{
+        transform: scaleY(1);
+    }
+    50%{
+        transform: scaleY(1.2);
+    }
+    100%{
+        transform: scaleY(0.8);
+    }
+}
+@keyframes moveCorpus{
+    0%{
+        transform: scale(1, 1);
+    }
+    50%{
+        transform: scale(1.1, 0.9);
+    }
+    100%{
+        transform: scale(0.9, 1.1);
+    }
+}
+.header{
+    max-width: 100%;
+    background-image: url('../img/header_backgr.png');
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+}
+.brand{
+    position: relative;
+    top: 50px;
+    width: 100vh;
+    margin: auto;
+    padding: 2em;
+}
+.welc_page{
+    position: absolute;  
+    margin: auto;
+}
+.description{
+    position: absolute;
+    margin: auto;
+    padding: 2em;
+}
+.description font{
+    color: white;
+    margin-left: 20%;
+}
+.description p{
+    color: black;
+    font-size: 20px;
+    margin-left: 20%;
+    width: 70%;
+    line-height: 1.5;
+}
+.description button{
+    margin-left: 20%;
+    border: 1px solid #F97300;
+    background:#F97300;
+    color:#fff;
+}
+.header .carousel,
+.about .carusel{  
+    margin: auto;
+    padding: 2em;
+}
+.header .carousel-item img{
+    width: 100%;
+    height: 500px;
+    margin: auto;
+    border-radius: 10%;  
+}
+.about .carousel-item img{
+    width: 100%;
+    height: 500px;
+    margin: auto;
+}
+.header .carousel-inner{
+    border-radius: 10%;
+    box-shadow: 0px 15px 15px 10px rgba(0, 0, 0, 0.5);
+}
+.header .carousel-control-prev-icon,
+.header .carousel-control-next,
+.about .carousel-control-prev-icon,
+.about .carousel-control-next{
+    visibility: hidden;
+}
+.header .carousel:hover .carousel-control-prev-icon,
+.header .carousel:hover .carousel-control-next-icon,
+.about .carousel:hover .carousel-control-prev-icon,
+.about .carousel:hover .carousel-control-next-icon{
+    visibility: visible;
+}
+.overlay{
+    position: absolute;
+    height: 0;
+    min-width: 100%;
+    left: 0;
+    top: 0;
+    background: rgba(244, 244, 244, 0.3);
+}
+.accent_bar{
+    background-color: #F97300;
+    width: 70px;
+    height: 5px;
+    line-height: 1;
+    display: inline-block;
+    margin: 5px 0 20px;
+}
+.sthing{
+    height: 50vh;
+    background-image: url('../img/pole_podsoln1.jpg');
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+}
+.filter_name_bar{
+    border-bottom: 2px solid rgb(100, 100, 100);
+}
+.filter_name_bar:hover{
+    cursor: pointer;
+}
+.sidebar ul{
+    padding: 0px;
+    margin: 0px;
+}
+.sidebar ul li{
+    list-style: none;
+}
+.sidebar .dropdown_filter li.showMenu .arrow1{
+    transform: rotate(-180deg);
+    margin: 0px;
+}
+.sidebar .dropdown_filter li .sub-menu{
+    display: none;
+}
+.sidebar .dropdown_filter li.showMenu .sub-menu{
+    display: block;
+}
+.arrow_side_bar::after{
+    display: inline-block;
+    transform: rotate(45deg);
+    transition: black;
+    margin: 0 0 5px 0;
+    border-style: solid;
+    border-width: 0 2px 2px 0;
+    padding: 3px;
+    content: '';
+}   
+/* Customize the label (the container)*/
+.side_checkbox {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+/* Hide the browser's default checkbox */
+.side_checkbox input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+/* Create a custom checkbox*/ 
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    border: 2px solid rgb(85, 85, 85, 0.7);
+    background-color: transparent;
+}
+/* On mouse-over, add a grey background color */
+.side_checkbox:hover input ~ .checkmark {
+    background-color: #ffc107;
+}
+/* When the checkbox is checked, add a blue background */
+.side_checkbox input:checked ~ .checkmark {
+    background-color: #ffc107;
+}
+/*  Create the checkmark/indicator (hidden when not checked)*/ 
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+ /* Show the checkmark when checked */
+.side_checkbox input:checked ~ .checkmark:after {
+    display: block;
+}
+/* Style the checkmark/indicator */
+.side_checkbox .checkmark:after {
+    left: 9px;
+    top: 5px;
+    width: 5px;
+    height: 10px;
+    border: solid black;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+.alert{
+    background-color: rgba(255, 234, 45, 0.4);
+}
+.hide{
+    display: none;
+}
+.chip {
+    display: block;
+    height: 50px;
+    font-size: 18px;
+    border-radius: 10px;
+    border: 2px solid rgb(139, 139, 139, 0.5);
+}
+.closebtn {
+    padding-left: 10px;
+    color: #888;
+    font-weight: bold;
+    float: right;
+    font-size: 20px;
+    cursor: pointer;
+}
+.closebtn:hover {
+    color: black;
+}
+.catalog .card-header{
+    border-bottom: 0px;
+    background-color: transparent;
+}
+.catalog .card-footer{
+    border-top: 0px;
+    background-color: transparent;
+}
+.catalog .btn{
+    background-color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+    border-color: rgb(0, 0, 0);
+}
+.modal_for_goods {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(204, 204, 204, 0.6);
+    opacity: 0;
+    visibility: hidden;
+    z-index: 2050;
+    transform: scale(1.1);
+    transition: visibility 0s linear 0.25s, opacity 0.25s 0s, transform 0.25s;
+}
+.modal-content_goods {
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.9) !important;
+    padding: 1rem 1.5rem;
+    width: 100% !important;
+    height: 100%;
+    border: 1px solid rgb(0, 0, 0, 0.4);
+    border-radius: 0.5rem;
+    transform: scale(0.6);
+    overflow-y: auto;
+    scrollbar-gutter: stable;
+}
+.table-bordered td{
+    border: 3px solid rgb(222, 226, 230) !important;
+    font-size: large;
+    font-weight: bold;
+}
+.modal-content_goods img{
+    width: 100%;
+}
+.close_btn_for_goods{
+    width: 100%;
+}
+.close_btn_goods {
+    width: 1rem;
+    line-height: 1.5rem;
+    text-align: center;
+    cursor: pointer;
+    background-color: transparent;
+    color: rgba(0, 0, 0);
+    transform: scale(3.0);
+}
+.show-modal {
+    opacity: 1;
+    visibility: visible;
+    transform: scale(1.0);
+    transition: visibility 0s linear 0s, opacity 0.25s 0s, transform 0.25s;
+}
+.news{
+    height: 75vh;
+    background-image: url('../img/traktor_4.jpg');
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+}
+.news .carousel-control-prev-icon,
+.news .carousel-control-next{
+    visibility: hidden;
+    filter: invert(100%);
+}
+.news .carousel:hover .carousel-control-prev-icon,
+.news .carousel:hover .carousel-control-next-icon{
+    visibility: visible;
+}
+.news .card img{
+    height: 200px;
+}
+.news .card-footer{
+    border-top: 0px;
+    background-color: rgba(255, 255, 255, 0);
+}
+.news .arrow::after{
+    display: inline-block;
+    transform: rotate(-45deg);
+    transition: black;
+    margin: 0 0 1px 3px;
+    border-style: solid;
+    border-width: 0 2px 2px 0;
+    padding: 3px;
+    content: '';
+}
+.news .card {
+    background-color: rgba(255, 255, 255, 0.9);
+}
+.contact_us {
+    padding-top: 5px;
+    border-right: 1px solid;
+    border-left: 1px solid;
+    border-color: black;
+}
+select[type="text"]:focus,
+textarea[type="text"]:focus,
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="tel"]:focus {   
+    border-color: rgba(0, 0, 0, 0.5);
+    box-shadow: 0px 0px 10px 4px rgba(0, 0, 0, 0.4);
+    outline: 0 none;
+}
+.contact_us input:invalid:required{   
+    border-color: rgba(224, 9, 9, 0.8);
+    box-shadow: 0px 0px 10px 4px rgba(244, 9, 9, 0.4);
+    outline: 0 none;
+}
+.contact_us select:invalid:required{   
+    border-color: rgba(224, 9, 9, 0.8);
+    box-shadow: 0px 0px 10px 4px rgba(244, 9, 9, 0.4);
+    outline: 0 none;
+}
+.contact_us input:valid:required{   
+    border: 1px solid rgb(206, 212, 218);
+}
+.contact_us select:valid:required{   
+    border: 1px solid rgb(206, 212, 218);
+}
+.footer{
+    margin-top: 5px;
+    margin-bottom: 5px;
+    border-top: 2px solid;
+    border-bottom: 2px solid;
+    border-color: black;
+}
+.footer ul{
+    padding-inline-start: 0px;
+}
+.icon-instagram,
+.icon-mail,
+.icon-facebook2,
+.icon-telegram{
+    color: black;
+    font-size: 50px;
+    margin-right: 15px;
+}
+.icon-twitter{
+    color: black;
+    font-size: 50px;
+}
+li.icon {
+    text-align: center;
+    display: inline;
+    list-style-type: none;
+}
+li.icon a{
+    text-decoration: none; 
+ }
+li.icon a.mail :hover{
+    border-radius: 15%;
+    box-shadow: 5px 5px 4px 2px rgba(0, 0, 0, 0.5);
+}
+li.icon a.telegram :hover{
+    border-radius: 50%;
+    box-shadow: 5px 5px 4px 2px rgba(0, 0, 0, 0.5);
+}
+li.icon a.face :hover{
+    border-radius: 10%;
+    box-shadow: 5px 5px 4px 2px rgba(0, 0, 0, 0.5);
+}
+li.icon a.insta :hover{
+    border-radius: 29%;
+    box-shadow: 5px 5px 4px 2px rgba(0, 0, 0, 0.5);
+}
+li.icon a.twit :hover{
+    border-radius: 25%;
+    box-shadow: 5px 5px 4px 2px rgba(0, 0, 0, 0.5);
+}
+li.contact{
+    text-align: center;
+    list-style-type: none;
+}
+li.contact a{
+    text-decoration: none; 
+}
+
+/*end*/
+
+@media screen and (min-width: 340px) and (max-width: 720px) {
+    .brand{
+        height: 35vh;
+    }
+    .description font{
+        margin-left: 0;
+    }
+    .description p{
+        margin-left: 0;
+        width: 100%;
+    }
+    .description button{
+        margin-left: 33%;
+    }
+    .sthing{
+        height: 25vh;
+    }
+    .modal-content_goods{
+        transform: scale(0.8);
+    }
+    .news{
+        height: 90vh;
+    }
+    .icon-instagram,
+    .icon-mail,
+    .icon-facebook2,
+    .icon-telegram{
+        margin-right: 10px;
+    }
+    
+}
+@media screen and (min-width: 340px) and (max-width: 991px) and (orientation: landscape){
+    .modal-content{
+        width: 40% !important;
+        height: 200px;
+    }
+    .lng_for_sm{
+        margin-top: 0;
+    }
+}
+@media screen and (min-width: 721px) and (max-width: 991px){
+    .brand{
+        height: 30vh;
+    }
+    .news{
+        height: 70vh;
+    }
+    .modal-content{
+       width: 40% !important;
+    }
+    .modal-content_goods{
+        transform: scale(0.9);
+    }
+}
+@media only screen and (max-width: 991px) and (orientation: landscape) {
+    .brand{
+        height: 40vh;
+    }
+    .description{
+        width: 100vh;
+    }
+    .sthing{
+        height: 50vh;
+    }
+    .news{
+        height: 150vh;
+    }
+}

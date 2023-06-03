@@ -1,0 +1,127 @@
+{
+    "nav_main" :{
+        "ru" : "Главная",
+        "en" : "Main",
+        "ua" : "Головна"
+    },
+    "nav_about" :{
+        "ru" : "О нас",
+        "en" : "About us",
+        "ua" : "Про нас"
+    },
+    "nav_catalog" :{
+        "ru" : "Каталог",
+        "en" : "Catalog",
+        "ua" : "Каталог"
+    },
+    "nav_news" :{
+        "ru" : "Новости",
+        "en" : "News",
+        "ua" : "Новини"
+    },
+    "nav_contacts" :{
+        "ru" : "Контакты",
+        "en" : "Contacts",
+        "ua" : "Контакти"
+    },
+    "language" :{
+        "ru" : "RUS",
+        "en" : "ENG",
+        "ua" : "UKR"
+    },
+    "more" :{
+        "ru" : "Подробнее",
+        "en" : "Learn more", 
+        "ua" : "Докладніше"
+    },
+    "welcome_words1" :{
+        "ru" : "Сельскохозяйтвенная техника ",
+        "en" : "Agricultural machinery ",
+        "ua" : "Сільськогосподарська техніка "
+    },
+    "welcome_words2" :{
+        "ru" : "Соблюдение высоких стандартов качества производства, гибкая передовая маркетинговая политика позволяют предприятию ",
+        "en" : "Compliance with high production quality standards, flexible advanced marketing policy allow the company ",
+        "ua" : "Дотримання високих стандартів якості виробництва, гнучка передова маркетингова політика дозволяють підприємству "
+    },
+    "welcome_words3" :{
+        "ru" : "ООО «AGRO» уверенно удерживать лидерские позиции в сельскохозяйственном машиностроении." ,
+        "en" : "LLC «AGRO» to confidently hold a leading position in agricultural engineering.",
+        "ua" : "ТОВ «AGRO» впевнено утримуватиме лідерські позиції в сільськогосподарському машинобудуванні."
+    },
+    "models" :{
+        "ru" : "Модели",
+        "en" : "Models",
+        "ua" : "Моделі"
+    },
+    "load_more" :{
+        "ru" : "Загрузить еще",
+        "en" : "Load more",
+        "ua" : "Завантажити ще"
+    },
+    "contact_us1" :{
+        "ru" : "Свяжитесь с нами.",
+        "en" : "Contact us.",
+        "ua" : "Зв'яжіться з нами."
+    },
+    "contact_us2" :{
+        "ru" : "Мы ожидаем Ваши вопросы и замечания.",
+        "en" : "We look forward to your questions and comments.",
+        "ua" : "Ми чекаємо на Ваші запитання та зауваження."
+    },
+    "contact_us_topic" :{
+        "ru" : "Тема сообщения: *",
+        "en" : "Message subject: *",
+        "ua" : "Тема повідомлення: *"
+    },
+    "contact_us_topic1" :{
+        "ru" : "Выбор...",
+        "en" : "Select...",
+        "ua" : "Вибір..."
+    },
+    "contact_us_topic2" :{
+        "ru" : "Техника",
+        "en" : "Machinery",
+        "ua" : "Техніка"
+    },
+    "contact_us_topic3" :{
+        "ru" : "Сервис",
+        "en" : "Service",
+        "ua" : "Сервіс"
+    },
+    "contact_us_topic4" :{
+        "ru" : "Сотрудничество",
+        "en" : "Cooperation",
+        "ua" : "Співробітництво"
+    },
+    "name" :{
+        "ru" : "Имя: *",
+        "en" : "Name: *",
+        "ua" : "Ім'я: *"
+    },
+    "phone" :{
+        "ru" : "Телефон: *",
+        "en" : "Phone nubmer: *",
+        "ua" : "Телефон: *"
+    },
+    "comment" :{
+        "ru" : "Комментарий:",
+        "en" : "Comment:",
+        "ua" : "Коментар:"
+    },
+    "submit" :{
+        "ru" : "Отправить",
+        "en" : "Send",
+        "ua" : "Надіслати"
+    },
+    "importent_text" :{
+        "ru" : "* - поля обязательные для заполнения.",
+        "en" : "* - mandatory fields.",
+        "ua" : "* - Поля обов'язкові для заповнення."
+    },
+    "address" :{
+        "ru" : "Площадь Конституции, 2/2, Харьков, Харьковская область, Украина, 61000",
+        "en" : "Constitution Square, 2/2, Kharkiv, Kharkiv region, Ukraine, 61000",
+        "ua" : "Площа Конституції, 2/2, Харків, Харківська область, Україна, 61000"
+    }
+}

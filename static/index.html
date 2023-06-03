@@ -1,0 +1,803 @@
+<!DOCTYPE html>
+<html lang ="en">
+<head>
+    <meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>AGRO</title>
+    <link rel="icon" href="img/main_img_2.png">
+    <link rel="stylesheet" type="text/css" href="css/css.css">
+    <link rel="stylesheet" type="text/css" href="./icomoon/style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <div class="container-fluid navigation fixed-top px-0">
+        <nav class="navbar navbar-expand-lg bg-dark navbar-dark d-flex justify-content-center col-12">
+            <div class="container-fluid d-flex justify-content-center col-lg-3 col-4">
+                <a class="navbar-brand m-0 p-0 unselectable" href="index.html">
+                    <img src="img/main_img_2.png" alt="logo" style="width:60px;">
+                </a>
+            </div>
+            <div class="container-fluid d-flex justify-content-center col-lg-6 col-4">
+                <button class="navbar-toggler " type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse flex-grow-0 justify-content-center" id="navbarSupportedContent">
+                    <ul class="navbar-nav text-justify align-items-center unselectable">
+                        <li class="nav-item d-flex justify-content-center align">
+                            <a class="nav-link lng-nav_main nav-main mb-0" data-value="main">Главная</a>
+                        </li>
+                        <li class="nav-item d-flex justify-content-center">
+                            <a class="nav-link lng-nav_about nav-about mb-0" data-value="about">О нас</a>
+                        </li>
+                        <li class="nav-item d-flex justify-content-center">
+                            <a class="nav-link lng-nav_catalog nav-catalog mb-0" data-value="catalog">Каталог</a>
+                        </li>
+                        <li class="nav-item d-flex justify-content-center">
+                            <a class="nav-link lng-nav_news nav-news mb-0" data-value="news">Новости</a>
+                        </li>
+                        <li class="nav-item d-flex justify-content-center">
+                            <a class="nav-link lng-nav_contacts nav-contacts mb-0" data-value="contacts">Контакты</a>
+                        </li>   
+                    </ul>
+                </div>
+            </div>
+            <div class="lang container-fluid d-flex justify-content-center col-lg-3 col-4">
+                <div class="l_menu unselectable">
+                    <button class="btn lang_btn lng-language">RUS</button>
+                    <div class="lang_menu lng_for_md d-none d-lg-flex hidden_men px-3 py-2">
+                        <ul>
+                            <li class="d-flex align-aitems-center my-2" data-lang="ua">
+                                Українська
+                            </li>
+                            <li class="d-flex align-aitems-center my-2" data-lang="en">
+                                English
+                            </li>
+                            <li class="d-flex align-aitems-center my-2" data-lang="ru">
+                                Русский
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="modal d-flex d-lg-none justify-content-center align-items-center">
+                        <div class="modal-content flex-column align-items-center">
+                            <div class="close_btn_area d-flex justify-content-end">
+                                <span class="close_btn">&times;</span>
+                            </div>   
+                            <div class="lang_menu lng_for_sm">
+                                <ul>
+                                    <li class="d-flex align-aitems-center my-2" data-lang="ua">
+                                        <h4>Українська</h4>
+                                    </li>
+                                    <li class="d-flex align-aitems-center my-2" data-lang="en">
+                                        <h4>English</h4>
+                                    </li>
+                                    <li class="d-flex align-aitems-center my-2" data-lang="ru">
+                                        <h4>Русский</h4>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <div class="progresbar d-flex justify-content-end">
+            <div class="animated_tractor d-lg-flex d-none">
+                <div class="cabina"></div>
+                <div class="corpus">
+                    <div class="Flag">
+                        <div class="Flag-1"></div>
+                        <div class="Flag-1"></div>
+                    </div>
+                </div>
+                <div class="L-wheel">
+                    <div class="L-wheel-1"></div>
+                    <div class="L-wheel-1"></div>
+                    <div class="L-wheel-1"></div>
+                    <div class="L-wheel-1"></div>
+                    <div class="L-wheel-2"></div>
+                </div>
+                <div class="R-wheel">
+                    <div class="R-wheel-1"></div>
+                    <div class="R-wheel-1"></div>
+                    <div class="R-wheel-1"></div>
+                    <div class="R-wheel-1"></div>
+                    <div class="R-wheel-2"></div>
+                </div>
+
+                <div class="truba">
+                    <div class="truba-1"></div>
+                    <div class="truba-2"></div>
+                </div>
+                <div class="clouds">
+                    <div class="cloud-1">
+                        <div class="cloud-1-1"></div>
+                        <div class="cloud-1-1"></div>
+                        <div class="cloud-1-1"></div>
+                        <div class="cloud-1-1"></div>
+                    </div>
+                    <div class="cloud-2">
+                        <div class="cloud-2-1"></div>
+                        <div class="cloud-2-1"></div>
+                        <div class="cloud-2-1"></div>
+                        <div class="cloud-2-1"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> 
+</head>
+
+<body>
+    <div class="header d-flex flex-wrap " id="main">
+        <div class="container d-flex col-12">
+            <div class="brand d-flex justify-content-center align-items-center unselectable">
+                <h1><strong>AGRO</strong></h1>
+            </div>
+        </div>
+                    
+        <div class="overlay unselectable"></div>
+
+        <div class="container welc_page d-flex flex-row flex-wrap align-items-center col-12">
+            <div class="container description d-flex col-lg-7 col-12">
+                <h3>
+                    <font>
+                        <span class="lng-welcome_words1 text-center">Сельскохозяйтвенная техника </span>
+                        <p class="lng-welcome_words2 mb-0">Соблюдение высоких стандартов качества производства, гибкая передовая маркетинговая политика позволяют предприятию </p>
+                        <p class="lng-welcome_words3">ООО «AGRO» уверенно удерживать лидерские позиции в сельскохозяйственном машиностроении.</p>
+                        <button class="btn btn-outline-secondary lng-more" onclick="location.href='#about'">Подробнее</button>
+                    </font>
+                </h3>
+            </div>
+
+            <div class="container d-lg-flex d-none unselectable col-lg-5">
+                <div id="carouselExampleControls" class="carousel slide w-100" data-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img class="d-block " src="img/traktor_1.jpg" alt="Первый слайд" >
+                        </div>
+                        <div class="carousel-item">
+                            <img class="d-block " src="img/traktor_2.jpg" alt="Второй слайд" >
+                        </div>
+                        <div class="carousel-item">
+                            <img class="d-block " src="img/traktor_3.jpg" alt="Третий слайд" >
+                        </div>
+                        <div class="carousel-item">
+                            <img class="d-block " src="img/traktor_5.jpg" alt="Четвертый слайд" >
+                        </div>
+                        <div class="carousel-item">
+                            <img class="d-block " src="img/traktor_8.jpg" alt="Пятый слайд" >
+                        </div>
+                    </div>
+                    <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+	</div>
+
+    <div class="about container-fluid d-flex flex-column justify-content-center" id="about">
+        <div class="my-4">
+            <div class="container d-flex d-lg-none unselectable px-0 col-12">
+                <div id="carouselExampleControls" class="carousel slide w-100" data-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img class="d-block " src="img/traktor_1.jpg" alt="Первый слайд" >
+                        </div>
+                        <div class="carousel-item">
+                            <img class="d-block " src="img/traktor_2.jpg" alt="Второй слайд" >
+                        </div>
+                        <div class="carousel-item">
+                            <img class="d-block " src="img/traktor_3.jpg" alt="Третий слайд" >
+                        </div>
+                        <div class="carousel-item">
+                            <img class="d-block " src="img/traktor_5.jpg" alt="Четвертый слайд" >
+                        </div>
+                        <div class="carousel-item">
+                            <img class="d-block " src="img/traktor_8.jpg" alt="Пятый слайд" >
+                        </div>
+                    </div>
+                    <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                </div>
+            </div>
+            <div class="row d-flex justify-content-center mt-4">
+                <div class="container-fluid d-flex flex-lg-row flex-column col-8">
+                    <div class="d-flex flex-column justify-content-center align-items-center px-4 col-lg-6 col-12">
+                        <h3>Lorem ipsum dolor sit amet</h3>
+                        <span class="accent_bar"></span>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla accumsan purus non neque vestibulum scelerisque. Nullam blandit velit massa, et facilisis lorem finibus sit amet. 
+                            Etiam condimentum tincidunt tempor. Duis lacinia, lorem ut lacinia consectetur, orci ex facilisis nulla, a gravida dolor lorem eget massa. Fusce pretium auctor sagittis. </p>
+                    </div>
+                    
+                    <div class="photo d-lg-flex d-none justify-content-center unselectable px-0 col-lg-6">
+                        <img src="img/posevnaya.jpg" alt="photo" width="100%">
+                    </div>
+                </div>
+            </div>
+            <div class="row d-flex justify-content-center flex-wrap">
+                <div class="container-fluid d-flex flex-lg-row flex-column col-8">
+                    <div class="photo d-lg-flex d-none justify-content-center unselectable px-0 col-lg-6">
+                        <img src="img/posevnaya.jpg" alt="photo" width="100%">
+                    </div>
+                    
+                    <div class="d-flex flex-column justify-content-center align-items-center px-4  col-lg-6 col-12">
+                        <h3>Lorem ipsum dolor sit amet</h3>
+                        <span class="accent_bar"></span>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam vitae posuere nulla. Pellentesque sed ante lacinia, aliquam enim vel, consectetur nisl. 
+                            Fusce tincidunt venenatis metus vitae imperdiet. Integer tempus turpis lacus, vitae fringilla eros eleifend non. Donec cursus, nunc lobortis porta scelerisque, 
+                            turpis dui aliquet eros, vel consequat tortor purus vel dolor.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row d-flex justify-content-center flex-wrap">
+                <div class="container-fluid d-flex flex-lg-row flex-column col-8">
+                    <div class="d-flex flex-column justify-content-center align-items-center px-4 col-lg-6 col-12">
+                        <h3>Lorem ipsum dolor sit amet</h3>
+                        <span class="accent_bar"></span>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum nisi velit, ultrices id quam nec, hendrerit venenatis massa. Fusce at metus condimentum, molestie lacus eget, venenatis lorem. 
+                            Vestibulum condimentum et velit ut tincidunt. Aliquam ullamcorper ut velit quis facilisis. Suspendisse auctor tempus ante et sollicitudin. Morbi id est sit amet mi ultrices facilisis. 
+                            </p>
+                    </div>
+                    <div class="photo d-lg-flex d-none justify-content-center unselectable px-0 col-lg-6">
+                        <img src="img/posevnaya.jpg" alt="photo" width="100%">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="sthing container-fluid d-flex justify-content-center">
+        <div class="row">
+
+        </div>
+    </div>
+
+    <div class="catalog container-fluid d-flex justify-content-center" id="catalog">
+        <div class="cotainer-fluid mt-4 col-lg-10 col-12">
+            <div class="row">
+                <div class="my-4 mx-auto col-lg-2 col-12">
+                    <div class="sidebar">
+                        <ul class="dropdown_filter">
+                            <li>
+                                <div class="filter_name_bar d-flex align-items-center justify-content-between my-4">
+                                    <span class="link_name"><h6 class="font-weight-bold">FILTER BY</h6></span>
+                                    <span class="arrow_side_bar arrow1"></span>
+                                </div>
+                                <ul class="sub-menu">
+                                    <li>
+                                        <div class="form-check pl-0 my-4">
+                                            <label class="side_checkbox text-uppercase small text-muted my-auto" for="filter_checkbox">
+                                                tractor
+                                                <input type="checkbox" id="filter_checkbox" value="tractor" >
+                                                <span class="checkmark"></span>
+                                            </label>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="form-check pl-0 my-4">
+                                            <label class="side_checkbox text-uppercase small text-muted my-auto" for="filter_checkbox1">
+                                                ne tractor
+                                                <input type="checkbox" id="filter_checkbox1" value="ne_tractor">
+                                                <span class="checkmark"></span>
+                                            </label>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="form-check pl-0 my-4">
+                                            <label class="side_checkbox text-uppercase small text-muted my-auto" for="filter_checkbox2">
+                                                zeleniy tractor
+                                                <input type="checkbox" id="filter_checkbox2" value="zeleniy_tractor">
+                                                <span class="checkmark"></span>
+                                            </label>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="form-check pl-0 my-4">
+                                            <label class="side_checkbox text-uppercase small text-muted my-auto" for="filter_checkbox3">
+                                                buldozer
+                                                <input type="checkbox" id="filter_checkbox3" value="buldozer">
+                                                <span class="checkmark"></span>
+                                            </label>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="form-check pl-0 my-4">
+                                            <label class="side_checkbox text-uppercase small text-muted my-auto" for="filter_checkbox4">
+                                                veloseped
+                                                <input type="checkbox" id="filter_checkbox4" value="veloseped">
+                                                <span class="checkmark"></span>
+                                            </label>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <div class="filter_name_bar d-flex align-items-center justify-content-between my-4">
+                                    <span class="link_name"><h6 class="font-weight-bold">FILTER BY</h6></span>
+                                    <span class="arrow_side_bar arrow1"></span>
+                                </div>
+                                <ul class="sub-menu">
+                                    <li>
+                                        <div class="form-check pl-0 my-4">
+                                            <label class="side_checkbox text-uppercase small text-muted my-auto" for="filter_checkbox5">
+                                                var1
+                                                <input class="" type="checkbox" value="" id="filter_checkbox5">
+                                                <span class="checkmark"></span>
+                                            </label>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="form-check pl-0 my-4">
+                                            <label class="side_checkbox text-uppercase small text-muted my-auto" for="filter_checkbox6">
+                                                var2
+                                                <input class="" type="checkbox" value="" id="filter_checkbox6">
+                                                <span class="checkmark"></span>
+                                            </label>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="form-check pl-0 my-4">
+                                            <label class="side_checkbox text-uppercase small text-muted my-auto" for="filter_checkbox7">
+                                                var2
+                                                <input class="" type="checkbox" value="" id="filter_checkbox7">
+                                                <span class="checkmark"></span>
+                                            </label>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="form-check pl-0 my-4">
+                                            <label class="side_checkbox text-uppercase small text-muted my-auto" for="filter_checkbox8">
+                                                var2
+                                                <input class="" type="checkbox" value="" id="filter_checkbox8">
+                                                <span class="checkmark"></span>
+                                            </label>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="form-check pl-0 my-4">
+                                            <label class="side_checkbox text-uppercase small text-muted my-auto" for="filter_checkbox9">
+                                                var2
+                                                <input class="" type="checkbox" value="" id="filter_checkbox9">
+                                                <span class="checkmark"></span>
+                                            </label>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <div class="filter_name_bar d-flex align-items-center justify-content-between my-4">
+                                    <span class="link_name"><h6 class="font-weight-bold">FILTER BY</h6></span>
+                                    <span class="arrow_side_bar arrow1"></span>
+                                </div>
+                                <ul class="sub-menu">
+                                    <li>
+                                        <div class="form-check pl-0 my-4">
+                                            <label class="side_checkbox text-uppercase small text-muted my-auto" for="filter_checkbox10">
+                                                var1
+                                                <input class="" type="checkbox" value="" id="filter_checkbox10">
+                                                <span class="checkmark"></span>
+                                            </label>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="form-check pl-0 my-4">
+                                            <label class="side_checkbox text-uppercase small text-muted my-auto" for="filter_checkbox11">
+                                                var2
+                                                <input class="" type="checkbox" value="" id="filter_checkbox11">
+                                                <span class="checkmark"></span>
+                                            </label>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="form-check pl-0 my-4">
+                                            <label class="side_checkbox text-uppercase small text-muted my-auto" for="filter_checkbox12">
+                                                var3
+                                                <input class="" type="checkbox" value="" id="filter_checkbox12">
+                                                <span class="checkmark"></span>
+                                            </label>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="form-check pl-0 my-4">
+                                            <label class="side_checkbox text-uppercase small text-muted my-auto" for="filter_checkbox13">
+                                                var4
+                                                <input class="" type="checkbox" value="" id="filter_checkbox13">
+                                                <span class="checkmark"></span>
+                                            </label>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="form-check pl-0 my-4">
+                                            <label class="side_checkbox text-uppercase small text-muted my-auto" for="filter_checkbox14">
+                                                var5
+                                                <input class="" type="checkbox" value="" id="filter_checkbox14">
+                                                <span class="checkmark"></span>
+                                            </label>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="d-flex align-items-start col-lg-10">
+                    <div class="row mt-4 col-lg-12">
+                        <div class="container-fluid px-4 mt-4 mx-3 col-12" >
+                            <h4 class="lng-models">Модели</h4>
+                        </div>
+                        <div class="container-fluid chips d-flex flex-row align-items-start unselectable mx-3 col-12">
+
+                        </div>
+                        <div class="container-fluid mt-3 mx-3 col-12 wh-100">
+                            <div class="alert hide text-center">
+                                <strong>Данный товар не найден!</strong>
+                            </div>
+                        </div>
+                        <div class="models container-fluid d-flex flex-wrap col-12">
+
+                        </div>
+                        <div class="btn_loadMore mx-auto">
+                            <button" class="btn btn-outline-warning btn-block lng-load_more" id="loadMore">Загрузить еще</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal_for_goods d-flex justify-content-center align-items-center">
+                <div class="modal-content_goods flex-column align-items-center">
+                    <div class="close_btn_for_goods d-flex justify-content-end">
+                        <span class="close_btn_goods">&times;</span>
+                    </div>   
+                    <div class="cont container-fluid d-flex mt-3 col-12">
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="news my-4 py-4 container-fluid d-flex justify-content-center" id="news">
+        <div class="row d-flex justify-content-center align-item-center">
+            <div class="cotainer-fluid d-lg-flex d-none justify-content-center align-items-center unselectable col-10">
+                <div id="carouselExampleControls1" class="carousel slide w-100" data-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active ">
+                            <div class="d-block corusel-news" alt="Второй слайд">
+                                <div class="d-flex flex-row flex-nowrap justify-content-around">
+                                    <div class="card d-flex align-items-center col-3">
+                                        <img src="img/posevnaya.jpg" class="card-img-top mt-2" alt="photo" >
+                                        <div class="card-body d-flex flex-column">
+                                            <h5 class="card-title ">Lorem ipsum dolor sit amet.</h5>
+                                            <p class="card-text ">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean tincidunt dignissim lectus, ac rhoncus turpis. Vestibulum lobortis laoreet 
+                                            viverra. Praesent.</p>
+                                            <a href="#" class="stretched-link"></a>
+                                        </div>
+                                        <div class="card-footer w-100 ">
+                                            <span class="arrow text-uppercase">
+                                                <strong class="lng-more">Подробнее</strong> 
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="card d-flex align-items-center col-3 ">
+                                        <img src="img/traktor_9.jpg" class="card-img-top mt-2" alt="photo" >
+                                        <div class="card-body d-flex flex-column">
+                                            <h5 class="card-title ">Lorem ipsum dolor sit amet.</h5>
+                                            <p class="card-text ">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ut tincidunt eros. Nullam rhoncus ante nec lacus tempor.</p> 
+                                            <a href="#" class="stretched-link"></a>
+                                        </div>
+                                        <div class="card-footer w-100">
+                                            <span class="arrow text-uppercase">
+                                                <strong class="lng-more">Подробнее</strong>
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="card d-flex align-items-center col-3">
+                                        <img src="img/fructy.jpg" class="card-img-top mt-2" alt="photo" >
+                                        <div class="card-body d-flex flex-column">
+                                            <h5 class="card-title ">Lorem ipsum dolor sit amet.</h5>
+                                            <p class="card-text ">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras aliquam lorem eros, in consequat neque suscipit faucibus. Donec.</p>
+                                            <a href="#" class="stretched-link"></a>
+                                        </div>
+                                        <div class="card-footer w-100">
+                                            <span class="arrow text-uppercase">
+                                                <strong class="lng-more">Подробнее</strong>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>                                
+                            </div>
+                        </div>
+                        <div class="carousel-item ">
+                            <div class="d-block corusel-news" alt="Второй слайд">
+                                <div class="d-flex flex-row flex-nowrap justify-content-around">
+                                    <div class="card d-flex align-items-center col-3">
+                                        <img src="img/pole.jpg" class="card-img-top mt-2" alt="photo" >
+                                        <div class="card-body d-flex flex-column">
+                                            <h5 class="card-title ">Lorem ipsum dolor sit amet.</h5>
+                                            <p class="card-text ">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean tincidunt dignissim lectus, ac rhoncus turpis. Vestibulum lobortis laoreet 
+                                            viverra. Praesent.</p>
+                                            <a href="#" class="stretched-link"></a>
+                                        </div>
+                                        <div class="card-footer w-100 ">
+                                            <span class="arrow text-uppercase">
+                                                <strong class="lng-more">Подробнее</strong>
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="card mr-2 d-flex align-items-center col-3">
+                                        <img src="img/laborotoria.jpeg" class="card-img-top mt-2" alt="photo" >
+                                        <div class="card-body d-flex flex-column">
+                                            <h5 class="card-title ">Lorem ipsum dolor sit amet.</h5>
+                                            <p class="card-text ">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ut tincidunt eros. Nullam rhoncus ante nec lacus tempor.</p> 
+                                            <a href="#" class="stretched-link"></a>
+                                        </div>
+                                        <div class="card-footer w-100">
+                                            <span class="arrow text-uppercase">
+                                                <strong class="lng-more">Подробнее</strong>
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="card d-flex align-items-center col-3 ">
+                                        <img src="img/pshenica.jpg" class="card-img-top mt-2" alt="photo" >
+                                        <div class="card-body d-flex flex-column">
+                                            <h5 class="card-title ">Lorem ipsum dolor sit amet.</h5>
+                                            <p class="card-text ">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras aliquam lorem eros, in consequat neque suscipit faucibus. Donec.</p>
+                                            <a href="#" class="stretched-link"></a>
+                                        </div>
+                                        <div class="card-footer w-100">
+                                            <span class="arrow text-uppercase">
+                                                <strong class="lng-more">Подробнее</strong>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>             
+                            </div>
+                        </div>
+                    </div>
+                    <a class="carousel-control-prev" href="#carouselExampleControls1" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#carouselExampleControls1" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="cotainer-fluid d-flex d-lg-none justify-content-center align-items-center unselectable col-10">
+                <div id="carouselExampleControls1" class="carousel slide w-100" data-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active ">
+                            <div class="d-block corusel-news" alt="Первый слайд">
+                                <div class="d-flex flex-row flex-nowrap justify-content-around">
+                                    <div class="card d-flex align-items-center col-10">
+                                        <img src="img/posevnaya.jpg" class="card-img-top mt-2" alt="photo" >
+                                        <div class="card-body d-flex flex-column">
+                                            <h5 class="card-title ">Lorem ipsum dolor sit amet.</h5>
+                                            <p class="card-text ">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean tincidunt dignissim lectus, ac rhoncus turpis. Vestibulum lobortis laoreet 
+                                            viverra. Praesent.</p>
+                                            <a href="#" class="stretched-link"></a>
+                                        </div>
+                                        <div class="card-footer w-100 ">
+                                            <span class="arrow text-uppercase">
+                                                <strong class="lng-more">Подробнее</strong> 
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>                                
+                            </div>
+                        </div>
+                        <div class="carousel-item ">
+                            <div class="d-block corusel-news" alt="Второй слайд">
+                                <div class="d-flex flex-row flex-nowrap justify-content-around">
+                                    <div class="card d-flex align-items-center col-10">
+                                        <img src="img/traktor_9.jpg" class="card-img-top mt-2" alt="photo" >
+                                        <div class="card-body d-flex flex-column">
+                                            <h5 class="card-title ">Lorem ipsum dolor sit amet.</h5>
+                                            <p class="card-text ">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ut tincidunt eros. Nullam rhoncus ante nec lacus tempor.</p> 
+                                            <a href="#" class="stretched-link"></a>
+                                        </div>
+                                        <div class="card-footer w-100">
+                                            <span class="arrow text-uppercase">
+                                                <strong class="lng-more">Подробнее</strong>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item ">
+                            <div class="d-block corusel-news" alt="Третий слайд">
+                                <div class="d-flex flex-row flex-nowrap justify-content-around">
+                                    <div class="card d-flex align-items-center col-10">
+                                        <img src="img/fructy.jpg" class="card-img-top mt-2" alt="photo" >
+                                        <div class="card-body d-flex flex-column">
+                                            <h5 class="card-title ">Lorem ipsum dolor sit amet.</h5>
+                                            <p class="card-text ">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras aliquam lorem eros, in consequat neque suscipit faucibus. Donec.</p>
+                                            <a href="#" class="stretched-link"></a>
+                                        </div>
+                                        <div class="card-footer w-100">
+                                            <span class="arrow text-uppercase">
+                                                <strong class="lng-more">Подробнее</strong>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>             
+                            </div>
+                        </div>
+                        <div class="carousel-item ">
+                            <div class="d-block corusel-news" alt="Четвертый слайд">                                
+                                <div class="d-flex flex-row flex-nowrap justify-content-around">
+                                    <div class="card d-flex align-items-center col-10">
+                                        <img src="img/pole.jpg" class="card-img-top mt-2" alt="photo" >
+                                        <div class="card-body d-flex flex-column">
+                                            <h5 class="card-title ">Lorem ipsum dolor sit amet.</h5>
+                                            <p class="card-text ">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean tincidunt dignissim lectus, ac rhoncus turpis. Vestibulum lobortis laoreet 
+                                            viverra. Praesent.</p>
+                                            <a href="#" class="stretched-link"></a>
+                                        </div>
+                                        <div class="card-footer w-100 ">
+                                            <span class="arrow text-uppercase">
+                                                <strong class="lng-more">Подробнее</strong>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>          
+                            </div>
+                        </div>
+                        <div class="carousel-item ">
+                            <div class="d-block corusel-news" alt="Пятый слайд">
+                                <div class="d-flex flex-row flex-nowrap justify-content-around">
+                                    <div class="card mr-2 d-flex align-items-center col-10">
+                                        <img src="img/laborotoria.jpeg" class="card-img-top mt-2" alt="photo" >
+                                        <div class="card-body d-flex flex-column">
+                                            <h5 class="card-title ">Lorem ipsum dolor sit amet.</h5>
+                                            <p class="card-text ">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ut tincidunt eros. Nullam rhoncus ante nec lacus tempor.</p> 
+                                            <a href="#" class="stretched-link"></a>
+                                        </div>
+                                        <div class="card-footer w-100">
+                                            <span class="arrow text-uppercase">
+                                                <strong class="lng-more">Подробнее</strong>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>             
+                            </div>
+                        </div>
+                        <div class="carousel-item ">
+                            <div class="d-block corusel-news" alt="Шестой слайд">
+                                <div class="d-flex flex-row flex-nowrap justify-content-around">
+                                    <div class="card d-flex align-items-center col-10">
+                                        <img src="img/pshenica.jpg" class="card-img-top mt-2" alt="photo" >
+                                        <div class="card-body d-flex flex-column">
+                                            <h5 class="card-title ">Lorem ipsum dolor sit amet.</h5>
+                                            <p class="card-text ">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras aliquam lorem eros, in consequat neque suscipit faucibus. Donec.</p>
+                                            <a href="#" class="stretched-link"></a>
+                                        </div>
+                                        <div class="card-footer w-100">
+                                            <span class="arrow text-uppercase">
+                                                <strong class="lng-more">Подробнее</strong>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>             
+                            </div>
+                        </div>
+                    </div>
+                    <a class="carousel-control-prev" href="#carouselExampleControls1" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#carouselExampleControls1" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="contact_form mb-4 container-fluid d-flex align-items-center justify-content-center" id="contacts">
+        <div class="contact_us cotainer-fluid py-4 col-md-10 col-12">
+            <div class="text_contact_us cotainer-fluid d-flex flex-column align-items-center justify-content-center ">
+                <h2 class="text-uppercase my-2 lng-contact_us1">Свяжитесь с нами.</h2>
+                <h5 class="lng-contact_us2">Мы ожидаем Ваши вопросы и замечания.</h5>
+            </div>
+            <div class="cotainer-fluid d-flex flex-column align-items-center justify-content-center">
+                <form class="d-flex flex-column align-items-center justify-content-center col-md-8 col-12">
+                    <div class="form-row d-flex flex-column col-md-8 col-10">
+                        <label class="lng-contact_us_topic my-1 mr-2" for="SelectPref">Тема сообщения: *</label>
+                        <select type="text" name="select" class="custom-select my-1 " id="SelectPref">
+                            <option selected class="lng-contact_us_topic1">Выбор...</option>
+                            <option value="Техника" class="lng-contact_us_topic2">Техника</option>
+                            <option value="Сервис" class="lng-contact_us_topic3">Сервис</option>
+                            <option value="Сотрудничество" class="lng-contact_us_topic4">Сотрудничество</option>
+                        </select>
+                        <label class="my-1 lng-name" for="inputName">Имя: *</label>
+                        <div class="">
+                            <input type="text" name="contact_name" class="form-control" id="inputName" placeholder="Name" minlength="2" maxlength="12">
+                        </div>
+                        <label class="my-1 " for="inputEmail">Email: *</label>
+                        <div class="">
+                            <input type="email" name="contact_email" class="form-control" id="inputEmail" placeholder="Email@example.com" minlength="5" maxlength="64">
+                        </div>
+                        <label class="my-1 lng-phone" for="inputphone">Телефон: *</label>
+                        <div class="">
+                            <input type="tel" name="contact_tel" class="form-control"  id="inputPhone" placeholder="+38(   )" minlength="18">       
+                        </div>
+                    </div>
+                    <div class="form-row d-flex flex-column my-2 col-8">
+                        <label class="my-1 lng-comment" for="inputComment">Комментарий:</label>
+                        <div class="">
+                            <textarea type="text" name="contact_textarea" class="form-control" id="inputComment" rows="5" placeholder="..." maxlength="300"></textarea>
+                        </div>
+                    </div>
+                    <div class="form-row d-flex justify-content-center my-2">
+                        <button type="submit" class="btn btn-dark form_btn lng-submit">Отправить</button>
+                    </div>
+                    <p class="lng-importent_text my-2">* - поля обязательные для заполнения.</p>
+                </form>    
+            </div>  
+        </div>
+    </div>
+
+    <div class="footer container-fluid pl-0 pr-0 d-flex flex-row flex-wrap">
+		<div class="container-fluid bg-white d-flex flex-column align-items-center col-md-6 col-12">
+            <div class="row justify-content-center">
+                <div class="d-flex justify-content-center pt-3 col-12">
+                    <ul>
+                        <li class="contact unselectable">
+                            <a href="https://www.google.com/maps/place/%D0%BF%D0%BB%D0%BE%D1%89%D0%B0+%D0%9A%D0%BE%D0%BD%D1%81%D1%82%D0%B8%D1%82%D1%83%D1%86%D1%96%D1%97,+2%2F2,+%D0%A5%D0%B0%D1%80%D0%BA%D1%96%D0%B2,+%D0%A5%D0%B0%D1%80%D0%BA%D1%96%D0%B2%D1%81%D1%8C%D0%BA%D0%B0+%D0%BE%D0%B1%D0%BB%D0%B0%D1%81%D1%82%D1%8C,+61000/data=!4m2!3m1!1s0x4127a0f1692f4d19:0x48ff46d4c0a92b02?sa=X&ved=2ahUKEwik6sWW6dr4AhVPQRoKHaZiDjIQ8gF6BAgXEAE " target="_blank">
+                                <img src="img/locaition_icon1.png" alt="phone">
+                            </a>
+                        </li>
+                        <li class="contact lng-address pl-2">Площадь Конституции, 2/2, Харьков, Харьковская область, Украина, 61000</li>
+                    </ul>
+                </div>
+                <div class="d-flex justify-content-center col-12">
+                    <ul>
+                        <li class="contact unselectable"><img src="img/phone_icon1.png" alt="phone"></li>
+                        <li class="contact pl-2">+38(099)763-36-39</li>
+                    </ul>
+                </div>
+            </div>
+		</div>
+        <div class="container-fluid bg-white d-flex align-items-center justify-content-center unselectable col-md-6 col-12">   
+            <div class="row pt-3">
+                <ul>
+                    <li class="icon"><a class="mail" href="https://mail.google.com/ " target="_blank" title="mail" alt="https://mail.google.com/"><span class="icon-mail"></span></a></li>
+                    <li class="icon"><a class="telegram" href="https://web.telegram.org/" target="_blank" title="telegram" alt="https://web.telegram.org/"><span class="icon-telegram"></span></a></li>
+                    <li class="icon"><a class="face" href="https://m.facebook.com/" target="_blank" title="facebook" alt="https://m.facebook.com/"><span class="icon-facebook2"></span></a></li>
+                    <li class="icon"><a class="insta" href="https://www.instagram.com/" target="_blank" title="instagram" alt="https://www.instagram.com/"><span class="icon-instagram"></span></a></li>
+                    <li class="icon"><a class="twit" href="https://twitter.com/" target="_blank" title="twitter" alt="https://twitter.com/"><span class="icon-twitter"></span></a></li>
+                </ul>
+			</div>
+        </div>
+        <div class="container-fluid col-12">
+            <p class="text-center lead unselectable">
+                AGRO Company &copy; 
+                <span class="year"></span>
+            </p>
+        </div>
+	</div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" type="text/javascript"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery.maskedinput@1.4.1/src/jquery.maskedinput.min.js" type="text/javascript"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    
+    <!-- <script type="text/javascript" src='js/test.js'></script> -->
+    <script type="module" src='/main.js'></script>
+</body>
+</html>
