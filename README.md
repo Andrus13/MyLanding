@@ -9,7 +9,7 @@ How to start!
 Local server:
 1. Start the server;
 2. Add tables ( contactForm.sql, goodsCategory.sql, goodsList.sql, goods_CategoryRelations.sql ) to database;
-3. Modify the index.js file (db/index.js) as needed;
+3. Modify the index.js file ( ../db/index.js ) as needed;
 ```javascript
    const sequelize = new Sequelize(
      'My_Landing', // database name
