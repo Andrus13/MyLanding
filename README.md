@@ -1,8 +1,8 @@
 # MyLanding
 
 Before you begin, you need to install:
-- Node.js ( https://nodejs.org );
-- local server ( I used OpenServer https://ospanel.io ); 
+   - Node.js ( https://nodejs.org );
+   - local server ( I used OpenServer https://ospanel.io ); 
 
 How to start!
 
@@ -27,6 +27,6 @@ Project:
    }).listen(3000, () =>{
 ```
 3. Run the following commands in the console:
-  - npm install ( install the required packages );
-  - node app.js;
+   - npm install ( install the required packages );
+   - node app.js;
 4. The project will be available in the browser at http://localhost:3000 ( if you haven't changed the port );
