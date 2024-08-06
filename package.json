@@ -12,5 +12,7 @@
   },
   "author": "Hniedoi Andrii",
   "license": "ISC",
-  "description": ""
+  "description": "",
+  "engines": {
+    "node": "^14.0"
 }
