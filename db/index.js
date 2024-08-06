@@ -4,8 +4,10 @@ const Sequelize = require('sequelize');
 //     dialect: "mysql",
 //     host: "127.0.0.1"
 // });
+const connString = process.env.DATABASE_URL || 'postgres://u3qs4tv3v45h6m:pfd9b37cdecab5bfe6bca38bb0c1735dc91e8cf1f7d9f76921692a60707c15e01@c3l5o0rb2a6o4l.cluster-czz5s0kz4scl.eu-west-1.rds.amazonaws.com:5432/d63tlanmbqi1j0'
+;
 
-sequelize = new Sequelize(process.env.DATABASE_URL, {
+sequelize = new Sequelize(connString, {
     dialect: "postgres",
     dialectOptions: {
       ssl: {

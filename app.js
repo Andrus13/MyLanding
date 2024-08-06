@@ -6,7 +6,7 @@ const db = require('./db');
 const { sequelize } = require('./db');
 const contactForm = db.contactForm;
 const goodsDB = db.goodsDB;
-const port = process.env.PORT || 5000;
+const port = process.env.PORT || 3000;
 
 const httpServer = http.createServer( (req, res) => {
     console.log(`req: ${req.url}`);
@@ -37,8 +37,8 @@ const httpServer = http.createServer( (req, res) => {
         sendRes(req.url, getContentType(req.url), res);
     }
 
-}).listen(process.env.PORT, () =>{
-    console.log('server start ${process.env.PORT}');
+}).listen(port, () =>{
+    console.log(`server start ${port}`);
 });
 
 function sendRes(url, contentType, res){
